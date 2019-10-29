@@ -1,22 +1,21 @@
-qimhangul-qt5
+HangulPlatformInputContextPlugin
 =============
 
 ## 소개
-qimhangul-qt5는 Qt 5를 위한 한글 입력 모듈입니다. Qt 5의 입력기 지원 방식은 Qt
-4와 비교하였을 때 다음과 같은 차이가 있습니다:
+HangulPlatformInputContextPlugin는 Qt 5를 위한 한글 입력 모듈입니다. 
 
-* xim 지원 중단.
-* 입력기 플러그인을 만들 때 필요한 클래스가 QInputContext에서
-  QPlatformInputContext로 변경됨. QPlatformInputContext는 QPA (Qt Platform
-Abstraction)의 일부로 제공되기 때문에 더 이상 공식적인 클래스로 지원되지 않음.
-
-qimhangul-qt5는 [qimhangul](https://github.com/choehwanjin/qimhangul)의 코드를
+HangulPlatformInputContextPlugin는 [qimhangul-qt5](https://github.com/peremen/qimhangul-qt5)의 코드를
 기반으로 합니다.
 
+## 변경 사항
+- 입력 언어가 변경 될 때마다 QInputMethod 의  locacleChanged 시그너를 발생 시킵니다.
+- QLocale locale() const 함수를 오버라이드 하여 추가 하였습니다.
+- 불필요한 X11 코드는 제거 하였고 이로인해 임베디드 및 다른 환경
+
 ## 빌드 및 설치
-빌드하기 위해서는 libhangul 패키지 0.0.4 버전 이상이 필요합니다.
+빌드하기 위해서는 libhangul 패키지 0.1.0 버전 이상이 필요합니다.
 libhangul은 다음 링크에서 구하실 수 있습니다.
-http://kldp.net/projects/hangul/
+https://github.com/libhangul/libhangul
 
 ## 빌드와 설치 방법
 
@@ -28,13 +27,6 @@ http://kldp.net/projects/hangul/
 
 
 ## 설정 방법
-Qt 4와 Qt 5가 공존하는 환경이라면 환경 변수 QT4_IM_MODULE 및 QT_IM_MODULE이 각각
-Qt 4와 5의 입력기 설정을 담당합니다. 만약 현재 사용 중인 환경에서 환경 변수가
-위와 다르다면 알맞게 조정하십시오.
-
-만약 Qt 5의 입력기 환경 변수가 QT_IM_MODULE이라면 아래와 같이 설정할 수
-있습니다.
-
 * QT_IM_MODULE=hangul:2 - 두벌식
 * QT_IM_MODULE=hangul:3f - 세벌식 최종
 * QT_IM_MODULE=hangul:39 - 세벌식 최종
