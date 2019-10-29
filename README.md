@@ -10,7 +10,7 @@ HangulPlatformInputContextPlugin는 [qimhangul-qt5](https://github.com/peremen/q
 ## 변경 사항
 - 입력 언어가 변경 될 때마다 QInputMethod 의  locacleChanged 시그너를 발생 시킵니다.
 - QLocale locale() const 함수를 오버라이드 하여 추가 하였습니다.
-- 불필요한 X11 코드는 제거 하였고 이로인해 임베디드 및 다른 환경
+- 불필요한 X11 코드는 제거 하였고 이로인해 임베디드 및 다른 환경에서도 동일
 
 ## 빌드 및 설치
 빌드하기 위해서는 libhangul 패키지 0.1.0 버전 이상이 필요합니다.
