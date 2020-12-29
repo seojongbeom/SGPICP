@@ -13,7 +13,7 @@ HangulPlatformInputContextPlugin는 [qimhangul-qt5](https://github.com/peremen/q
 - 불필요한 X11 코드는 제거 하였고 이로인해 임베디드 및 다른 환경에서도 동일하게 사용이 가능해졌습니다.
 
 ## 빌드 및 설치
-빌드하기 위해서는 libhangul 패키지 0.1.0 버전 이상이 필요합니다.
+빌드하기 위해서는 libhangul 패키지 1.0 버전 이상이 필요합니다.
 libhangul은 다음 링크에서 구하실 수 있습니다.
 https://github.com/libhangul/libhangul
 
