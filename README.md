@@ -1,4 +1,4 @@
-HangulPlatformInputContextPlugin
+SGPICP(SoriGeul Platform Input Context Plugin)
 =============
 
 ## 소개
